@@ -1,0 +1,204 @@
+<FirstSemester>:
+    name: 'FirstSemester'
+    Widget:
+        size: root.size
+        canvas.before:
+            Rectangle:
+                size: self.size
+                #source: 'images/firstsemster.jpg'
+
+    MDBoxLayout:
+        orientation: 'vertical'
+        padding: 10, 10
+        row_default_height: '48dp'
+        row_force_default: True
+        #spacing: 10, 10
+        ScrollView:
+            size: self.size
+            BoxInFirstSemester:
+                MDRectangleFlatButton:
+                    text: "Return"
+                    on_release:
+                        app.root.current = "Interactive"
+                        root.manager.transition.direction = 'right'
+
+
+<BoxInFirstSemester>:
+    size_hint_y: None
+    cols: 1
+    row_default_height: '30dp'
+    row_force_default: True
+    spacing: 20,20
+    padding: 10, 10
+    MDBoxLayout:
+        MDLabel:
+            text:'I hope you will be happy after result'
+            color: 0,0,0,1
+            halign: 'center'
+    MDBoxLayout:
+        spacing: '20dp'
+        MDLabel:
+            text:""
+            color: 0,0,0,1
+            halign: 'center'
+        MDLabel:
+            text:"CC"
+            color: 0,0,0,1
+            halign: 'center'
+        MDLabel:
+            text:"Exam"
+            color: 0,0,0,1
+            halign: 'center'
+    MDBoxLayout:
+        spacing: '20dp'
+        MDLabel:
+            id: text0
+            text:""
+            color: 0,0,0,1
+            halign: 'center'
+        TextInput:
+            id : cc0
+            multiline: False
+
+        TextInput:
+            id : exam0
+            multiline: False
+
+    MDBoxLayout:
+        spacing: '20dp'
+        MDLabel:
+            id: text1
+            text:""
+            color: 0,0,0,1
+            halign: 'center'
+        TextInput:
+            id : cc1
+            multiline: False
+
+        TextInput:
+            id : exam1
+            multiline: False
+
+
+    MDBoxLayout:
+        spacing: '20dp'
+        MDLabel:
+            id: text2
+            text:""
+            color: 0,0,0,1
+            halign: 'center'
+        TextInput:
+            id : cc2
+            multiline: False
+
+        TextInput:
+            id : exam2
+            multiline: False
+
+
+    MDBoxLayout:
+        spacing: '20dp'
+        MDLabel:
+            id: text3
+            text:""
+            color: 0,0,0,1
+            halign: 'center'
+        TextInput:
+            id : cc3
+            multiline: False
+
+        TextInput:
+            id : exam3
+            multiline: False
+
+    MDBoxLayout:
+        spacing: '20dp'
+        MDLabel:
+            id: text4
+            text:""
+            color: 0,0,0,1
+            halign: 'center'
+        TextInput:
+            id : cc4
+            multiline: False
+
+        TextInput:
+            id : exam4
+            multiline: False
+
+    MDBoxLayout:
+        spacing: '20dp'
+        MDLabel:
+            id: text5
+            text:""
+            halign: 'center'
+            color: 0,0,0,1
+        TextInput:
+            id : cc5
+            multiline: False
+        TextInput:
+            id : exam5
+            multiline: False
+
+    MDBoxLayout:
+        spacing: '20dp'
+        MDLabel:
+            id: text6
+            text:""
+            color: 0,0,0,1
+            halign: 'center'
+        TextInput:
+            id : cc6
+            multiline: False
+        TextInput:
+            id : exam6
+            multiline: False
+
+    MDBoxLayout:
+        spacing: '20dp'
+        MDLabel:
+            id: text7
+            text:""
+            color: 0,0,0,1
+            halign: 'center'
+        TextInput:
+            id : cc7
+            multiline: False
+
+        TextInput:
+            id : exam7
+            multiline: False
+
+    MDBoxLayout:
+        spacing: '20dp'
+        MDLabel:
+            id: text8
+            text:""
+            color: 0,0,0,1
+            halign: 'center'
+        TextInput:
+            id : cc8
+            multiline: False
+
+        TextInput:
+            id : exam8
+            multiline: False
+            #size_hint: None,1
+            #width: '50dp'
+
+    MDBoxLayout:
+        MDLabel:
+            id: WrongMessage
+            text: "If you finished with your points press Calculate"
+            color: 0,0,0,1
+            halign: 'center'
+    MDBoxLayout:
+        Widget:
+        MDRaisedButton:
+            text: "Calculate"
+            theme_text_color: "Custom"
+            md_bg_color: 0,0.8,0.65,1
+            on_press: root.calculateFirst()
+
+
+

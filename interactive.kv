@@ -1,0 +1,102 @@
+<InteractiveScreen>:
+    name: 'Interactive'
+    MDNavigationLayout:
+        ScreenManager:
+
+            Screen:
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    size: root.size
+                    MDToolbar:
+                        title: "Industrial Engineering"
+                        specific_text_color: (0,0,0,1)
+                        #right_action_items:[["logout",lambda x: app.SurfaceScreen()]]
+                        left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
+                        md_bg_color: (0,0.8,0.65,1)
+                        elevation:10
+
+                    MDBoxLayout:
+                        size: root.size
+                        orientation: 'vertical'
+                        MDLabel:
+                            text: "Note: If any news about Industrial Engineering It will be displayed here "
+                            text_size: self.width-50,100
+                            font_name: "fonts/AltonaSans-Italic.ttf"
+                            halign: 'center'
+                            font_size: 18
+                            size_hint : 1,None
+                            height: 500
+                            color: 1,0,0,1
+                        MDLabel:
+                            text: " Thank you for download this App "
+                            text_size: self.width-50,100
+
+                            font_name: "fonts/AltonaSans-Italic.ttf"
+                            halign: 'center'
+                            size_hint : 1,None
+                            height: 100
+                            color: 0,0,0,1
+
+        MDNavigationDrawer:
+            orientation: 'vertical'
+
+            id: nav_drawer
+            MDBoxLayout:
+                padding: '8dp'
+                spacing: '8dp'
+                adaptive_height: True
+                orientation: 'vertical'
+                MDLabel:
+                    text: "App Menu"
+                    font_name: 'fonts/Redemtion.ttf'
+                    size_hint : 1,None
+                    height: '50dp'
+                    font_size: 30
+                    color: 0,0,0,1
+                    halign: "center"
+                Image:
+                    source: 'images/industrial.png'
+                    size_hint : 1,None
+                    height: '180dp'
+                MDLabel:
+                    text: "Speciality"
+                    #font_name: 'fonts/Soria-Bold.otf'
+                    size_hint : 1,None
+                    height: "10dp"
+                    color: 0,0,0,1
+                    halign: "center"
+
+            ScrollView:
+                MDList:
+                    OneLineIconListItem:
+                        elevation:10
+                        text: "Calculate Semester 1 Result"
+                        on_release:
+                            app.root.current = "FirstSemester"
+                            root.manager.transition.direction = 'left'
+
+                    OneLineIconListItem:
+                        elevation:10
+                        text: "Calculate Semester 2 Result"
+                        on_release:
+                            app.root.current = "SecondSemester"
+                            root.manager.transition.direction = 'left'
+
+                    OneLineIconListItem:
+                        elevation:10
+                        text: "About Speciality"
+                        on_release:
+                            app.root.current = "speciality"
+                            root.manager.transition.direction = 'left'
+
+                    OneLineIconListItem:
+                        elevation:10
+                        text: "Return"
+                        on_release:
+                            app.root.current = "surface"
+                            root.manager.transition.direction = 'right'
+
+
+
+
+

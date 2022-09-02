@@ -1,0 +1,23 @@
+<Info>:
+    name: "info"
+    MDBoxLayout:
+        size: root.size
+        orientation: "vertical"
+        MDLabel:
+            text: "This app is developed by student Mohamed ElAmine,At first I was making a simple app for pc using tkinter but I want to make an app for android I looked for a way to do it and found kivy is the best easily and clear but what I didn't know is that it is very difficult convert your project to apk it stops all my project because at first i had a simple idea of calculating class rate but i was thinking to add more features to it but with debug problem i want to learn another language and start over"
+            text_size: self.width-50,700
+            font_name: "fonts/AltonaSans-Italic.ttf"
+            font_size: 25
+            halign: 'center'
+            size_hint : 1,None
+            height: 100
+            color: 0,0,0,1
+        Widget:
+            MDRaisedButton:
+                text: "Return"
+                theme_text_color: "Custom"
+                md_bg_color: 0,0.8,0.65,1
+                on_release:
+                    app.root.current = "surface"
+                    root.manager.transition.direction = 'right'
+
